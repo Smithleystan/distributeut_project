@@ -66,7 +66,7 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
                         rl.setPrompt(`Montant insuffisant. il manque ${parseFloat(resteAPayer).toFixed(2)} € \n`)
                         rl.prompt()
 
-                        
+
                     // ici le client insere plus que le prix. on lui rends sa monnaie 
 
                     }else if (monnais > boisson[i].prix){
@@ -78,7 +78,7 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
                    
                     }else{        
                         
-                        //ici le client a inseret le montant tout rond. on ne lui rend pas de monnaie 
+                        //ici le client a insere le montant tout rond. on ne lui rend pas de monnaie 
                 
                         rendu = 0
                         console.log(`vous avez inseré le bon montant qui est de ${monnais} €`)
