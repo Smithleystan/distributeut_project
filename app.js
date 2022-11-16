@@ -112,3 +112,5 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
     })
 
 })
+
+//https://www.toptal.com/developers/gitignore
