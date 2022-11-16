@@ -25,6 +25,11 @@ boisson.push( new Boisson("Schweppes", 1.2))
 boisson.push( new Boisson("Pepsi", 1.5)) 
 boisson.push( new Boisson("Gini", 0.8)) 
 boisson.push( new Boisson("Champomy", 2)) 
+boisson.push( new Boisson("Champomy", 2)) 
+boisson.push( new Boisson("Champomy", 2)) 
+boisson.push( new Boisson("Champomy", 2)) 
+boisson.push( new Boisson("Champomy", 2)) 
+
 
 
 
