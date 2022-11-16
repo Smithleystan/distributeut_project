@@ -14,7 +14,18 @@ let boisson = []
 boisson.push(new Boisson ("Coca", 0.80)) 
 boisson.push(new Boisson("Fanta", 0.70)) 
 boisson.push(new Boisson("IceTea", 0.70)) 
-boisson.push( new Boisson("Perrier", 1)) 
+boisson.push( new Boisson("oasis", 0.9)) 
+boisson.push( new Boisson("orangina", 0.7)) 
+boisson.push( new Boisson("Powerade", 0.8)) 
+boisson.push( new Boisson("Lorina", 0.8)) 
+boisson.push( new Boisson("Finley", 0.7)) 
+boisson.push( new Boisson("sprite", 1)) 
+boisson.push( new Boisson("7UP", 1.2)) 
+boisson.push( new Boisson("Schweppes", 1.2)) 
+boisson.push( new Boisson("Pepsi", 1.5)) 
+boisson.push( new Boisson("Gini", 0.8)) 
+boisson.push( new Boisson("Champomy", 2)) 
+
 
 
 
@@ -23,7 +34,7 @@ boisson.push( new Boisson("Perrier", 1))
 
 //affichage des boissons et leurs prix 
 console.log('liste des boissons : ')
-for(j=0; j<4; j++){
+for(j=0; j<14; j++){
     console.log(`- ${boisson[j].marque} :   ${boisson[j].prix}€`)
 }
 

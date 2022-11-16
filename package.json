@@ -1,0 +1,19 @@
+{
+  "name": "distributeur",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Smithleystan/distributeut_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Smithleystan/distributeut_project/issues"
+  },
+  "homepage": "https://github.com/Smithleystan/distributeut_project#readme"
+}
