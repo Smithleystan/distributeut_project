@@ -79,10 +79,8 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
                         rendu = parseFloat(reste).toFixed(2)
                         console.log(`nous vous rendons ${rendu} €`)
                         console.log(`votre ${boisson[i].marque} est pret`)
-                        rl.close()
-                   
-                    }else{        
-                        
+                        rl.close()                   
+                    }else{                                
                         //ici le client a insere le montant tout rond. on ne lui rend pas de monnaie 
                 
                         rendu = 0
