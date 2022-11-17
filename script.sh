@@ -1,11 +1,7 @@
-git add .
-
-echo "saisser message commit : "
+echo "saisir message commit "
 read message
 
+git add .
 git commit -m "$message"
-
-git push origin main 
-
+git push origin main
 read
-

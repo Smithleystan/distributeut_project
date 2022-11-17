@@ -53,19 +53,19 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
     console.log(`${boisson[i].marque}   :   ${boisson[i].prix} €`)
     rl.question(`inserez le montant de ${boisson[i].marque}  : `, monnaie=>{
         if (monnaie< boisson[i].prix){
-            let monnais = parseFloat(monnaie)
+            let monnais = Number(monnaie)
             resteAPayer = boisson[i].prix - monnais            
-            rl.setPrompt(`Montant insuffisant. il manque ${parseFloat(resteAPayer).toFixed(2)} € : \n ` )
+            rl.setPrompt(`Montant insuffisant. il manque ${Number(resteAPayer).toFixed(2)} € : \n ` )
             rl.prompt()
                 rl.on('line', answer =>{
-                    monnais = monnais + parseFloat(answer)
+                    monnais = monnais + Number(answer)
                     
 
                     //ici le client insere une somme inferieur au prix. on lui demande d'inseret le reste
                     if(answer < boisson[i].prix && monnais < boisson[i].prix){
                         resteAPayer = boisson[i].prix - monnais
 
-                        rl.setPrompt(`Montant insuffisant. il manque ${parseFloat(resteAPayer).toFixed(2)} € \n`)
+                        rl.setPrompt(`Montant insuffisant. il manque ${Number(resteAPayer).toFixed(2)} € \n`)
                         rl.prompt()
 
 
@@ -73,7 +73,7 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
 
                     }else if (monnais > boisson[i].prix){
                         reste = monnais - boisson[i].prix
-                        rendu = parseFloat(reste).toFixed(2)
+                        rendu = Number(reste).toFixed(2)
                         console.log(`nous vous rendons ${rendu} €`)
                         console.log(`votre ${boisson[i].marque} est pret`)
                         rl.close()                   
@@ -96,7 +96,7 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
             console.log(`vous avez inseré ${monnaie} €`)
             if (monnaie > boisson[i].prix){
                 reste = monnaie-boisson[i].prix
-                rendu = parseFloat(reste).toFixed(2)
+                rendu = Number(reste).toFixed(2)
                 console.log(`nous vous rendons ${rendu} €`)
                 console.log(`votre ${boisson[i].marque} est pret`)
             
