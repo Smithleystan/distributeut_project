@@ -4,33 +4,28 @@ const rl = readline.createInterface(input, output)
 
 //Création du tableau de boisson//
 
-function Boisson(marque, prix){
+function Boisson(numero,marque, prix){
+    this.numero = numero 
     this.marque = marque,
     this.prix = prix
 }
 
 let boisson = []
 
-boisson.push(new Boisson ("Coca", 0.80)) 
-boisson.push(new Boisson("Fanta", 0.70)) 
-boisson.push(new Boisson("IceTea", 0.70)) 
-boisson.push( new Boisson("oasis", 0.9)) 
-boisson.push( new Boisson("orangina", 0.7)) 
-boisson.push( new Boisson("Powerade", 0.8)) 
-boisson.push( new Boisson("Lorina", 0.8)) 
-boisson.push( new Boisson("Finley", 0.7)) 
-boisson.push( new Boisson("sprite", 1)) 
-boisson.push( new Boisson("7UP", 1.2)) 
-boisson.push( new Boisson("Schweppes", 1.2)) 
-boisson.push( new Boisson("Pepsi", 1.5)) 
-boisson.push( new Boisson("Gini", 0.8)) 
-boisson.push( new Boisson("Champomy", 2)) 
-boisson.push( new Boisson("Champomy", 2)) 
-boisson.push( new Boisson("Champomy", 2)) 
-boisson.push( new Boisson("Champomy", 2)) 
-boisson.push( new Boisson("Champomy", 2)) 
-
-
+boisson.push(new Boisson ("1","Coca", 0.80)) 
+boisson.push(new Boisson("2","Fanta", 0.70)) 
+boisson.push(new Boisson("3","IceTea", 0.70)) 
+boisson.push( new Boisson("4","oasis", 0.9)) 
+boisson.push( new Boisson("5","orangina", 0.7)) 
+boisson.push( new Boisson("6","Powerade", 0.8)) 
+boisson.push( new Boisson("7","Lorina", 0.8)) 
+boisson.push( new Boisson("8","Finley", 0.7)) 
+boisson.push( new Boisson("9","sprite", 1)) 
+boisson.push( new Boisson("10","7UP", 1.2)) 
+boisson.push( new Boisson("11","Schweppes", 1.2)) 
+boisson.push( new Boisson("12","Pepsi", 1.5)) 
+boisson.push( new Boisson("13","Gini", 0.8)) 
+boisson.push( new Boisson("14","Champomy", 2)) 
 
 
 
@@ -40,7 +35,7 @@ boisson.push( new Boisson("Champomy", 2))
 //affichage des boissons et leurs prix 
 console.log('liste des boissons : ')
 for(j=0; j<14; j++){
-    console.log(`- ${boisson[j].marque} :   ${boisson[j].prix}€`)
+    console.log(` ${boisson[j].numero}   ${boisson[j].marque} :   ${boisson[j].prix}€`)
 }
 
 let i =0
@@ -49,7 +44,7 @@ let resteAPayer
 
 // choix de la boisson par le client.
 rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
-    while(choix != boisson[i].marque){
+    while(choix != boisson[i].numero){
         i++
     }
 //ici on demande au client d'inserer la monnaie en fonction  du prix de la boisson
