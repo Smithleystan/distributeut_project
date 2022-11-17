@@ -25,11 +25,38 @@ boisson.push( new Boisson("13","Gini", 0.8))
 boisson.push( new Boisson("14","Champomy", 2)) 
 
 //affichage des boissons et leurs prix 
-console.log('liste des boissons : ')
-for(j=0; j<14; j++){
-    console.log(` ${boisson[j].numero}   ${boisson[j].marque} :   ${boisson[j].prix}€`)
-}
+// console.log('liste des boissons : ')
+// for(j=0; j<14; j++){
+//     console.log(` ${boisson[j].numero}   ${boisson[j].marque} :   ${boisson[j].prix}€`)
+// }
 
 let i =0
 let reste
 let resteAPayer 
+
+let Answer = window.prompt("Quelle boisson voulez vous ?")
+let answer =parseInt(Answer)
+while(answer != boisson[i].numero){
+    i++
+}
+console.log(boisson[i].marque)
+
+console.log(`${boisson[i].marque}   :   ${boisson[i].prix} €`)
+
+ Answer = window.prompt(`inserez le montant de ${boisson[i].marque}  : `)
+ let monnaie =Number(Answer)
+
+if 
+
+while (monnaie< Number(boisson[i].prix)){
+    let monnais = parseFloat(monnaie)
+    resteAPayer = Number(boisson[i].prix) - monnais 
+    alert(`Montant insuffisant. il manque ${parseFloat(resteAPayer).toFixed(2)} ` )
+    Answer = window.prompt(`inserez le reste à payer  ${parseFloat(resteAPayer).toFixed(2)} : `)
+    let restant = Number(Answer)
+    monnais = monnais + restant
+    monnaie = monnais
+    
+
+ }
+    
