@@ -48,7 +48,7 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
         i++
     }
 //ici on demande au client d'inserer la monnaie en fonction  du prix de la boisson
-
+    console.log(`${boisson[i].marque}   :   ${boisson[i].prix} €`)
     rl.question(`inserez le montant de ${boisson[i].marque}  : `, monnaie=>{
         if (monnaie< boisson[i].prix){
             let monnais = parseFloat(monnaie)
