@@ -1,5 +1,6 @@
 const readline = require('readline')
 const {stdin : input, stdout : output}  = require('process')
+const { Console } = require('console')
 const rl = readline.createInterface(input, output)
 
 //Création du tableau de boisson//
@@ -30,7 +31,8 @@ boisson.push( new Boisson("14","Champomy", 2))
 
 
 
-
+console.log("Bonjour !!!")
+console.log('Voici la liste des boissons')
 
 //affichage des boissons et leurs prix 
 console.log('liste des boissons : ')
@@ -53,7 +55,7 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
         if (monnaie< boisson[i].prix){
             let monnais = parseFloat(monnaie)
             resteAPayer = boisson[i].prix - monnais            
-            rl.setPrompt(`Montant insuffisant. inserez le reste de la monnaie ${parseFloat(resteAPayer).toFixed(2)} € : ` )
+            rl.setPrompt(`Montant insuffisant. il manque ${parseFloat(resteAPayer).toFixed(2)} € : \n ` )
             rl.prompt()
                 rl.on('line', answer =>{
                     monnais = monnais + parseFloat(answer)
