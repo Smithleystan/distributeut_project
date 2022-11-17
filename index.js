@@ -59,22 +59,26 @@ if (monnaie< boisson[i].prix ){
         
     
      }
+     alert(`votre ${boisson[i].marque} est pret`)
+     alert(`Bonne dégustation`)
         
 }else{
     alert(`vous avez inseré ${monnaie} €`)
-    if (monnaie > boisson[i].prix){
-        reste = monnaie-boisson[i].prix
-        rendu = parseFloat(reste).toFixed(2)
-        console.log(`nous vous rendons ${rendu} €`)
-        console.log(`votre ${boisson[i].marque} est pret`)
+    if (monnaie > Number(boisson[i].prix)){
+        reste = monnaie-Number(boisson[i].prix)
+        rendu = Number(reste).toFixed(2)
+        alert(`nous vous rendons ${rendu} €`)
+        alert(`votre ${boisson[i].marque} est pret`)
+        alert('bonne degustation')
     
     }           
 
     else{
 
         rendu = 0
-        console.log(`vous avez inseré le bon montant qui est de ${monnaie} €`)
-        console.log(`votre ${boisson[i].marque} est pret`)
+        alert(`vous avez inseré le bon montant qui est de ${monnaie} €`)
+        alert(`votre ${boisson[i].marque} est pret`)
+        alert("Bonne dégustation")
     
     }
 }
