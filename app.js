@@ -117,3 +117,10 @@ rl.question('Quelle boisson voulez vous ? :  \n', choix=>{
 })
 
 //https://www.toptal.com/developers/gitignore
+
+//methode permettant  de convertir en Euro
+
+/*function displayPrice(number) {
+    return new Intl.NumberFormat("fr-FR", { style: "currency", currency: "EUR" }).format(number);
+}*/
+

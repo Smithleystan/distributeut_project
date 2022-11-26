@@ -33,65 +33,72 @@ boisson.push( new Boisson("14","Champomy", 2))
 let i =0
 let reste
 let resteAPayer 
-
-let Answer = window.prompt("Quelle boisson voulez vous ?")
-let answer =parseInt(Answer)
-while(answer != boisson[i].numero){
-    i++
-}
-console.log(boisson[i].marque)
-
-console.log(`${boisson[i].marque}   :   ${boisson[i].prix} €`)
-
- Answer = window.prompt(`inserez le montant de ${boisson[i].marque}  : `)
- let monnaie =Number(Answer)
-
-if (monnaie< boisson[i].prix ){
-
-    while (monnaie< Number(boisson[i].prix)){
-        let monnais = Number(monnaie)
-        resteAPayer = Number(boisson[i].prix) - monnais 
-        alert(`Montant insuffisant. il manque ${Number(resteAPayer).toFixed(2)} ` )
-        Answer = window.prompt(`inserez le reste à payer  ${Number(resteAPayer).toFixed(2)} : `)
-        let restant = Number(Answer)
-        monnais = monnais + restant
-        monnaie = monnais
-        
-    
-     }
-      if (monnaie > Number(boisson[i].prix)){
-        reste = monnaie - Number(boisson[i].prix)
-        rendu = Number(reste).toFixed(2)
-        alert(`nous vous rendons ${rendu} €`)
-        alert(`votre ${boisson[i].marque} est pret`)
-        
-
-      }else {
-        alert(`votre ${boisson[i].marque} est pret`)
-        alert(`Bonne dégustation`)
-           
-      }
+let choise
+do {
+    choise=Number(window.prompt('1 commander \n 2 quitter'))
+    if(choise===1){
 
 
-  
-}else{
-    alert(`vous avez inseré ${monnaie} €`)
-    if (monnaie > Number(boisson[i].prix)){
-        reste = monnaie-Number(boisson[i].prix)
-        rendu = Number(reste).toFixed(2)
-        alert(`nous vous rendons ${rendu} €`)
-        alert(`votre ${boisson[i].marque} est pret`)
-        alert('bonne degustation')
-    
-    }           
-
-    else{
-
-        rendu = 0
-        alert(`vous avez inseré le bon montant qui est de ${monnaie} €`)
-        alert(`votre ${boisson[i].marque} est pret`)
-        alert("Bonne dégustation")
-    
+    let Answer = window.prompt("Quelle boisson voulez vous ?")
+    let answer =parseInt(Answer)
+    while(answer != boisson[i].numero){
+        i++
     }
-}
-
+    console.log(boisson[i].marque)
+    
+    console.log(`${boisson[i].marque}   :   ${boisson[i].prix} €`)
+    
+     Answer = window.prompt(`inserez le montant de ${boisson[i].marque}  : `)
+     let monnaie =Number(Answer)
+    
+    if (monnaie< boisson[i].prix ){
+    
+        while (monnaie< Number(boisson[i].prix)){
+            let monnais = Number(monnaie)
+            resteAPayer = Number(boisson[i].prix) - monnais 
+            alert(`Montant insuffisant. il manque ${Number(resteAPayer).toFixed(2)} ` )
+            Answer = window.prompt(`inserez le reste à payer  ${Number(resteAPayer).toFixed(2)} : `)
+            let restant = Number(Answer)
+            monnais = monnais + restant
+            monnaie = monnais
+            
+        
+         }
+          if (monnaie > Number(boisson[i].prix)){
+            reste = monnaie - Number(boisson[i].prix)
+            rendu = Number(reste).toFixed(2)
+            alert(`nous vous rendons ${rendu} €`)
+            alert(`votre ${boisson[i].marque} est pret`)
+            
+    
+          }else {
+            alert(`votre ${boisson[i].marque} est pret`)
+            alert(`Bonne dégustation`)
+               
+          }
+    
+    
+      
+    }else{
+        alert(`vous avez inseré ${monnaie} €`)
+        if (monnaie > Number(boisson[i].prix)){
+            reste = monnaie-Number(boisson[i].prix)
+            rendu = Number(reste).toFixed(2)
+            alert(`nous vous rendons ${rendu} €`)
+            alert(`votre ${boisson[i].marque} est pret`)
+            alert('bonne degustation')
+        
+        }           
+    
+        else{
+    
+            rendu = 0
+            alert(`vous avez inseré le bon montant qui est de ${monnaie} €`)
+            alert(`votre ${boisson[i].marque} est pret`)
+            alert("Bonne dégustation")
+        
+        }
+    }
+    }
+    
+}while(choise !== 2)
